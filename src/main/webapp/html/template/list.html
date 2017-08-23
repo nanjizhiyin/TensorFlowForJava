@@ -1,0 +1,12 @@
+<table border="1">
+        <tr class="thead">
+        <td class="name">名字</td>
+        <td class="area_id">地区编号</td>
+        </tr>
+        {% for item in items %}
+        <tr>
+            <td >{{item.name}}</td>
+            <td >{{item.area_id}}</td>
+        </tr>
+        {% endfor %}
+</table>

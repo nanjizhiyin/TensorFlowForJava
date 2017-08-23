@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "mybatis-3-mapper.dtd" >
+<mapper namespace="com.xpfirst.hdrRouter.mapper.UserMapper">
+    <select id="findUserByUsername" resultType="com.xpfirst.hdrRouter.entity.User">
+        SELECT
+            a.username,
+            a.encryptedPassword,
+            a.`name`,
+            a.email,
+            a.mobile,
+            a.avatar,
+            a.artwork,
+            a.bindingMobile,
+            a.bindingEmail,
+            a.realName,
+            a.gender,
+            a.signature
+        FROM
+            ofuser a
+        WHERE
+            a.username = #{username} AND a.isEffective = 1
+    </select>
+</mapper>
